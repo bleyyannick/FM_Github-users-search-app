@@ -11,8 +11,7 @@ const REACT_APP_GITHUB_TOKEN = import.meta.env.VITE_APP_GITHUB_TOKEN
 
 function App() {
   const [user, setUser] = useState({});
-  const [query, setQuery] = useState('');
-  const [searchValue, setSearchValue] = useState('');
+  const [query, setQuery] = useState('octocat');
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -27,27 +26,23 @@ function App() {
         if(!response.ok) throw new Error("No user found"); 
         const data = await response.json(); 
         setUser(data);
-
       } catch(err) {
         throw new Error(err.message)
       }
-      
     };
     fetchUser();   
   }, [query])
 
-  const handleSearchValue = (value) => setSearchValue(value)
-  const handleSubmit = (e) => {
+  
+  const handleSubmit = (e, value) => {
       e.preventDefault(); 
-      setQuery(searchValue)
+      setQuery(value)
   }
   return (
    <>
     <Header />
     <SearchBar 
-    searchValue={searchValue} 
-    onSearch={handleSearchValue} 
-    onSubmit={handleSubmit}  />
+     onSubmit={handleSubmit}  />
     <UserInfo user={user} />
    </>
   )

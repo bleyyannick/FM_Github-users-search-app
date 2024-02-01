@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
 
-function SearchBar( {searchValue, onSearch, onSubmit}) {
+import { useRef } from "react"
+
+function SearchBar({onSubmit}) {
+  const inputRef = useRef()
   return (
-    <form onSubmit={e => onSubmit(e)}>
+    <form onSubmit={e => onSubmit(e, inputRef.current.value)}>
         <input type="text"
-            value={searchValue} 
-            onChange={e=> onSearch(e.target.value)} 
+            ref={inputRef}
             placeholder="Search Github username..." />
-         <button type="submit">
-            Search
-         </button>
+         <button type="submit">Search</button>
     </form>
   )
 }
