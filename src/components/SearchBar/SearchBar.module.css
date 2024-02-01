@@ -1,0 +1,24 @@
+
+form {
+    background: white;
+    padding: 0 1.5em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.3em;
+}
+
+
+input {
+    height:3.5em;
+    width: 60%;
+    margin: 0 1em;
+    border: none;
+}
+
+
+
+.btn_search {
+    padding: 1em 2em;
+    border: none;
+    border-radius: .7em;
+}

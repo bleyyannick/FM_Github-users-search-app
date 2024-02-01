@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-import styles from './user.module.css'; 
+import styles from './UserInfo.module.css'; 
 
 function UserInfo({user}) {
   return (
     <div className={styles.container}>
-       <img src={user.avatar_url}  alt="github user avatar"/>
+       <img  className={styles.logoImg}src={user.avatar_url}  alt="github user avatar"/>
        <div>
          <p>{user.name}</p>
          <a href={user.html_url} target='_blank' rel="noreferrer">{`@${user.login}`}</a>

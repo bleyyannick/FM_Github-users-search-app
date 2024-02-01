@@ -1,0 +1,11 @@
+
+.container {
+    background: white;
+    border-radius: .9em;
+}
+
+.logoImg {
+    width: 117px; 
+    height: 117px; 
+    border-radius: 117px;
+}

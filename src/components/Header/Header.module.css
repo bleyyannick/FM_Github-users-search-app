@@ -1,0 +1,12 @@
+
+
+.container {
+   display: flex; 
+   justify-content: space-between;
+}
+
+.btn {
+    align-self: center; 
+    border:none; 
+    color: inherit; 
+}
