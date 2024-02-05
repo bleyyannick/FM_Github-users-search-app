@@ -1,24 +1,33 @@
 
 form {
     background: white;
-    padding: 0 1.5em;
+    padding: 0 .8em;
     display: flex;
     align-items: center;
     margin-bottom: 1.3em;
+    justify-content: space-between;
+    height: 4em;
+    border-radius: .9em;
 }
 
+.iconSearch {
+    margin-left: 1.5em;
+}
 
 input {
-    height:3.5em;
-    width: 60%;
-    margin: 0 1em;
+    height: 100%;
+    width: 50%;
     border: none;
+    align-self: center;
 }
 
+.error {
+    width: 20%;
+    text-align: center;
+}
 
-
-.btn_search {
-    padding: 1em 2em;
+.btn_search{
+    padding: 1.2em 2.3em;
     border: none;
     border-radius: .7em;
 }

@@ -1,11 +1,48 @@
 
 .container {
+    padding: 2em;
     background: white;
     border-radius: .9em;
 }
-
 .logoImg {
     width: 117px; 
     height: 117px; 
     border-radius: 117px;
+}
+
+.userDescription {
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+}
+.userDescription h1 {
+    margin: 0;
+}
+
+
+.userNumbers, .userStatics {
+    display: flex;
+  justify-content: end;
+}
+
+.userStatics {
+    flex-direction: column;
+    align-items: end;
+}
+.userNumbers ul, .userStatics ul {
+    display:flex;
+    list-style-type: none;
+    width: 79%;
+    border-radius: 12px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.userDescription p {
+    margin-bottom: 0;
+    margin-top: 1.5em;
+}
+
+.userDate {
+    margin-top: 7px;
 }

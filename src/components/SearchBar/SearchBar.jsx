@@ -7,11 +7,12 @@ function SearchBar({onSubmit}) {
   const inputRef = useRef()
   return (
     <form onSubmit={e => onSubmit(e, inputRef.current.value)}>
-        <img  src={iconSearch} alt="search icon"/>
-        <input type="text"
-            ref={inputRef}
-            placeholder="Search Github username..." />
-         <button className={styles.btn_search}type="submit">Search</button>
+        <img className={styles.iconSearch} src={iconSearch} alt="search icon"/>
+        <input type="text" ref={inputRef} placeholder="Search Github username..." />
+        <div className={styles.error}>
+          <p></p>
+        </div>
+        <button className={styles.btn_search}type="submit">Search</button>
     </form>
   )
 }
