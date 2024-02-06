@@ -7,7 +7,7 @@ function SearchBar({onSubmit}) {
   const inputRef = useRef()
   return (
     <form onSubmit={e => onSubmit(e, inputRef.current.value)}>
-        <img className={styles.iconSearch} src={iconSearch} alt="search icon"/>
+        <img className={styles.iconSearch} src={iconSearch} alt="search bar icon"/>
         <input type="text" ref={inputRef} placeholder="Search Github username..." />
         <div className={styles.error}>
           <p></p>
